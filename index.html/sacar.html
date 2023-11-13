@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Botão de Saque</title>
+</head>
+<body>
+    <h1>Seu Saldo: <span id="saldo">R$ 100,00</span></h1>
+    <input type="number" id="valorSaque" placeholder="Digite o valor do saque">
+    <button id="sacarButton">Saque</button>
+
+    <script>
+        document.getElementById('sacarButton').addEventListener('click', function() {
+            var valorSaque = parseFloat(document.getElementById('valorSaque').value);
+            if (isNaN(valorSaque)) {
+                alert('Por favor, insira um valor válido.');
+                return;
+            }
+            
+            fetch('/sacar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ valor: valorSaque }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('saldo').textContent = 'R$ ' + data.saldo;
+                    alert('Saque de R$ ' + valorSaque + ' realizado com sucesso.');
+                } else {
+                    alert('Saldo insuficiente para realizar o saque.');
+                }
+            })
+            .catch(error => console.error(error));
+        });
+    </script>
+</body>
+</html>
+<java
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
+
+app.use(express.static('public'));
+app.use(bodyParser.json());
+
+let saldo = 100;
+
+app.post('/sacar', (req, res) = {
+    const valorSaque = req.body.valor;
+
+    if (saldo = valorSaque) {
+        saldo -= valorSaque;
+        res.json({ success: true, saldo });
+    } else {
+        res.json({ success: false });
+    }
+)};
+
+app.listen(3000, () = {
+    console.log('Servidor rodando em http://localhost:3000');
+});

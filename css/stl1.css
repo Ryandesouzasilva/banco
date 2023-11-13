@@ -1,0 +1,70 @@
+
+body{
+    background-color: blueviolet;
+}
+#btn1{
+background-color: white; 
+color: black; 
+border: 2px solid blueviolet;
+border-radius: 35%;
+margin-right: 90%;
+margin-left: 100%;
+position: fixed;
+bottom: 500px;
+right: -1050px;
+}
+#btn1:hover{
+background-color: blueviolet;
+color: white;
+}
+#btn2{
+background-color: white; 
+color: black; 
+border: 2px solid blueviolet;
+border-radius: 35%;
+margin-right: 90%;
+margin-left: 100%;
+position: fixed;
+bottom: 530px;
+right: -1050px;
+}
+#btn2:hover{
+background-color: blueviolet;
+color: white;
+}
+#btn3{
+background-color: white; 
+color: black; 
+border: 2px solid blueviolet;
+border-radius: 45%;
+margin-right: 90%;
+margin-left: 100%;
+position: fixed;
+bottom: 560px;
+right: -1050px;
+}
+#btn3:hover{
+background-color: blueviolet;
+color: white;
+}        
+#button{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #6c1fd8;
+    border-radius: 45%;
+    margin-right: 90%;
+    margin-left: 100%;
+    bottom: 500px;
+    left: 1050px;
+}
+#img2{
+    margin-left: 65%;
+}
+h1{
+    color: aliceblue;
+    font:italic ;
+}
+#field{
+    background-color: white;
+    border-radius: 20px;
+}
